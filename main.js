@@ -46,18 +46,14 @@ console.log(baselayers.wms);
 // Overlay mit GPX-Track anzeigen
 overlays.routes.addTo(map);
 
-
-
-
-
-
-
 // Elevation initialisiert
 const elevationControl = L.control.elevation({
     elevationDiv: "#profile",
     followMarker: false,
     theme: "gold-theme",
 }).addTo(map);
+
+
 
 // funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
 const drawTrack = (nr) => {
@@ -95,7 +91,7 @@ const drawTrack = (nr) => {
     elevationControl.load(`routes/${nr}.gpx`);
 };
 
-const selectedTrack = 6;
+const selectedTrack = 20;
 drawTrack(selectedTrack);
 
 
