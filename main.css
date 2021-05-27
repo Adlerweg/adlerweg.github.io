@@ -7,7 +7,7 @@ body {
 
 header {
     color: #fff;
-    background-color: #3D9970;
+    background-color: #535d59;
     font-style: italic;
     font-weight: bold;
     font-size: 1.2em;
@@ -15,7 +15,7 @@ header {
 }
 
 header .logo {
-    color: #2ECC40;
+    color: #4f5850;
 }
 
 header a {
