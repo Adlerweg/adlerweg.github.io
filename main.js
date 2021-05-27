@@ -23,7 +23,7 @@ let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 9,
     layers: [
-        baselayers.grau
+        baselayers.highdpi
     ]
 })
 
@@ -91,7 +91,7 @@ const drawTrack = (nr) => {
     elevationControl.load(`routes/${nr}.gpx`);
 };
 
-const selectedTrack = 20;
+const selectedTrack = 1;
 drawTrack(selectedTrack);
 
 
