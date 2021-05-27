@@ -41,3 +41,6 @@ let layerControl = L.control.layers({
 }).addTo(map);
 
 console.log(baselayers.wms);
+
+
+
