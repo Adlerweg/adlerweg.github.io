@@ -43,7 +43,7 @@ let layerControl = L.control.layers({
 
 console.log(baselayers.wms);
 
-//rainviewer
+//rainviewer to main map
 L.control.rainviewer({
     position: 'topleft',
     nextButtonText: '>',
