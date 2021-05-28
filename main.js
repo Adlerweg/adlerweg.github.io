@@ -43,6 +43,18 @@ let layerControl = L.control.layers({
 
 console.log(baselayers.wms);
 
+//rainviewer
+L.control.rainviewer({
+    position: 'topleft',
+    nextButtonText: '>',
+    playStopButtonText: 'Play/Stop',
+    prevButtonText: '<',
+    positionSliderLabelText: "Hour:",
+    opacitySliderLabelText: "Opacity:",
+    animationInterval: 450,
+    opacity: 0.5
+}).addTo(map);
+
 // Overlay mit GPX-Track anzeigen
 overlays.routes.addTo(map);
 
