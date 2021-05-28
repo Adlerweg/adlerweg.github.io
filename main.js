@@ -43,6 +43,11 @@ let layerControl = L.control.layers({
 
 console.log(baselayers.wms);
 
+//add scale
+L.control.scale({
+    imperial: false
+}).addTo(map);
+
 //rainviewer to main map
 L.control.rainviewer({
     position: 'topleft',
