@@ -41,9 +41,9 @@ header a {
 }
 
 
-.right,
-.right a:link,
-.right a:visited {
+.link,
+.link a:link,
+.link a:visited {
     color: white;
     font-size: 0.6em;
     float: right;
@@ -54,3 +54,48 @@ header a {
     float: center;
     ;
 }
+
+
+
+.footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+  }
+  
+  .column {
+    float: left;
+    padding: 15px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .menu {
+    width: 25%;
+  }
+  
+  .content {
+    width: 75%;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #2d4b0cfb;
+    color: #ffffff;
+  }
+  
+  .menu li:hover {
+    background-color: #643012;
+  }
+  
