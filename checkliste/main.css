@@ -55,12 +55,14 @@ header a {
     ;
 }
 
+* {
+    box-sizing: border-box;
+  }  
 
-
-.footer {
+.spalte {
     background-color: grey;
     color: white;
-    padding: 15px;
+    padding: 10px;
   }
   
   .column {
@@ -98,4 +100,32 @@ header a {
   .menu li:hover {
     background-color: #643012;
   }
+
+
+.top {
+    padding-bottom: 1px;
+}
+
+  #home {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2d4b0cfb;
+  }
   
+  #liste  {
+    float: left;
+  }
+  
+  #liste a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #liste a:hover{
+    background-color: #643012;
+  }
