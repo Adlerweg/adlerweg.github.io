@@ -25,9 +25,10 @@ header a {
 }
 
 #map {
-    height: 360px;
+    height: 400px;
     width: 100%;
     border: 1px solid gray;
+    align-items: center;
     /*platzhalter karte mit rahmen*/
 }
 
@@ -128,4 +129,16 @@ header a {
 
 #liste a:hover {
     background-color: #643012;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header img.banner {
+        width: 100vw
+    }
 }
