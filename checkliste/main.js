@@ -15,7 +15,7 @@ let overlays = {
     routes: L.featureGroup()
 };
 
-// Karte initialisieren und auf Innsbrucks Wikipedia Koordinate blicken
+// KARTE INITIALISIERT + ZOOM CENTER
 let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 9,
@@ -25,27 +25,25 @@ let map = L.map("map", {
     ]
 })
 
-// Kartenhintergründe und Overlays zur Layer-Control hinzufügen
+// OVERLAY: + KARTEN DATEN
 let layerControl = L.control.layers({
     "STANDARD (basemap.at)": baselayers.highdpi,
     "RELIEF (basemap.at)": baselayers.terrain,
-    //"basemap.at Orthofoto beschriftet": baselayers.ortho_overlay,
 }, {
-    "GPX-Routen": overlays.routes,
-    "Daten: Wetterstationen": baselayers.wms,
-    //"Hütten": baselayers.wms,
+    "Routen": overlays.routes,
+    "Wetterstationen": baselayers.wms,
 }).addTo(map);
 
 console.log(baselayers.wms);
 
-//add scale
+//LEAFLET SCALEBAR
 L.control.scale({
     imperial: false,
     maxWidth: 400,
 
 }).addTo(map);
 
-//rainviewer to main map
+//LEAFLET RAINVIEWER
 L.control.rainviewer({
     position: 'topleft',
     nextButtonText: '>',
