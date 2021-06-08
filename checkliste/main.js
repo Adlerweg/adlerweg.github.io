@@ -1,10 +1,7 @@
 let baselayers = {
     terrain: L.tileLayer.provider("BasemapAT.terrain"),
     highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
-    ortho_overlay: L.layerGroup([
-        L.tileLayer.provider("BasemapAT.orthofoto"),
-        L.tileLayer.provider("BasemapAT.overlay")
-    ]),
+    openstreet:  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
 };
 
 // Overlays für die Themen zum Ein- und Ausschalten definieren
@@ -23,8 +20,9 @@ let map = L.map("map", {
     ]
 })
 
-// OVERLAY: + KARTEN DATEN
+// OVERLAY: + KARTEN & DATEN
 let layerControl = L.control.layers({
+    "OpenStreetMap": baselayers.openstreet,
     "STANDARD (basemap.at)": baselayers.highdpi,
     "RELIEF (basemap.at)": baselayers.terrain,
 }, {
@@ -47,11 +45,12 @@ L.control.rainviewer({
     positionSliderLabelText: "Uhrzeit:",
     opacitySliderLabelText: "Deckkraft:",
     animationInterval: 450,
-    opacity: 0.5
+    opacity: 0.7
 }).addTo(map);
 
-// Overlay mit GPX-Track anzeigen
+// DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
+overlays.stations.addTo(map);
 
 // funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
 const drawTrack = (nr) => {
@@ -110,3 +109,42 @@ pulldown.onchange = () => {
     //console.log('changed!!!!!', pulldown.value);
     drawTrack(pulldown.value);
 };
+
+
+
+
+let awsURL = 'https://wiski.tirol.gv.at/lawine/produkte/ogd.geojson'; 
+
+fetch(awsURL) //daten herunterladen von der datagvat bib
+    .then(response => response.json()) //konvertieren in json (fehleranfällig daher nächste then clause)
+    .then(json => { //weiterarbeiten mit json
+        console.log('Daten konvertiert: ', json);
+        for (station of json.features) {
+            //console.log('Station: ', station);
+            //https://leafletjs.com/reference-1.7.1.html#marker-l-marker
+            let marker = L.marker([
+                station.geometry.coordinates[1],
+                station.geometry.coordinates[0]
+            ]);
+
+            let formattedDate = new Date(station.properties.date); //neues datumsobjekt erstellen, in Zeile 58 wird darauf zurückgegriffen, de als ländereinstellung 
+
+            marker.bindPopup(`
+            <h3>${station.properties.name}</h3>
+            <ul>
+                <li>Datum: ${formattedDate.toLocaleString("de")}</li>
+                <li>Seehöhe: ${station.geometry.coordinates[2] ||'?'} m.ü.A.</li>
+                <li>Temperatur: ${station.properties.LT ||'?'} °C</li>
+                <li>Luftfeuchtigkeit: ${station.properties.RH ||'?'} %</li>
+                <li>Schneehöhe: ${station.properties.HS ||'?'} cm</li>
+                <li>Windgeschwindigkeit: ${station.properties.WG ||'?'} km/h</li>
+                <li>Windrichtung: ${station.properties.WR ||'?'} °</li>
+            </ul>
+            <a target="blank" href="https://wiski.tirol.gv.at/lawine/grafiken/1100/standard/tag/${station.properties.plot}.png">Grafik</a>
+            `); //name hinzufügen bei den markern
+            //extra infos als liste zu den popups hinzugefügt
+            // link zur grafik die hinterlegt sind zur jeweiligen station
+        }
+        // set map view to all stations
+        map.fitBounds(overlays.stations.getBounds());
+    }).addTo(map);
