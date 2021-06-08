@@ -40,10 +40,60 @@ header a {
     stroke-opacity: 0;
 }
 
-#profil {
-    width: 100%;
-    padding: 50px 0;
+
+.link,
+.link a:link,
+.link a:visited {
+    color: white;
+    font-size: 0.6em;
+    float: right;
+    padding: 8px;
+}
+
+.center {
+    float: center;
+    ;
+}
+
+
+
+
+.top {
+    padding-bottom: 1px;
+}
+
+#home {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2d4b0cfb;
+}
+
+#liste {
+    float: left;
+}
+
+#liste a {
+    display: inline-block;
+    color: white;
     text-align: center;
-    background-color: olive;
-    margin-top: 20px
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#liste a:hover {
+    background-color: #643012;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header img.banner {
+        width: 100vw
+    }
 }
