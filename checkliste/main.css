@@ -25,10 +25,10 @@ header a {
 }
 
 #map {
-    width: calc(100% -2px);
-    height: 70vh;
+    height: 360px;
+    width: 100%;
     border: 1px solid gray;
-    background-color: lightslategray;
+    /*platzhalter karte mit rahmen*/
 }
 
 #profile {
