@@ -1,9 +1,6 @@
 let baselayers = {
     terrain: L.tileLayer.provider("BasemapAT.terrain"),
     highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
-    wms: L.tileLayer.wms('https://maps.tirol.gv.at/externalcall.jsp?user=guest&project=tmap_master&view=sport_wintersport', {
-        layers: 'PVECT\PLA_RO\SKJ_PL'
-    }),
     ortho_overlay: L.layerGroup([
         L.tileLayer.provider("BasemapAT.orthofoto"),
         L.tileLayer.provider("BasemapAT.overlay")
@@ -12,7 +9,8 @@ let baselayers = {
 
 // Overlays für die Themen zum Ein- und Ausschalten definieren
 let overlays = {
-    routes: L.featureGroup()
+    routes: L.featureGroup(),
+    stations: L.featureGroup(),
 };
 
 // KARTE INITIALISIERT + ZOOM CENTER
@@ -31,26 +29,23 @@ let layerControl = L.control.layers({
     "RELIEF (basemap.at)": baselayers.terrain,
 }, {
     "Routen": overlays.routes,
-    "Wetterstationen": baselayers.wms,
+    "Wetterstationen": overlays.stations,
 }).addTo(map);
-
-console.log(baselayers.wms);
 
 //LEAFLET SCALEBAR
 L.control.scale({
     imperial: false,
     maxWidth: 400,
-
 }).addTo(map);
 
 //LEAFLET RAINVIEWER
 L.control.rainviewer({
     position: 'topleft',
     nextButtonText: '>',
-    playStopButtonText: 'Play/Stop',
+    playStopButtonText: 'Start/Stop',
     prevButtonText: '<',
-    positionSliderLabelText: "Hour:",
-    opacitySliderLabelText: "Opacity:",
+    positionSliderLabelText: "Uhrzeit:",
+    opacitySliderLabelText: "Deckkraft:",
     animationInterval: 450,
     opacity: 0.5
 }).addTo(map);
