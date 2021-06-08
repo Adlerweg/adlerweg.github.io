@@ -65,6 +65,8 @@ L.control.rainviewer({
 // Overlay mit GPX-Track anzeigen
 overlays.routes.addTo(map);
 
+
+
 // Elevation initialisiert
 const elevationControl = L.control.elevation({
     elevationDiv: "#profile",
@@ -73,6 +75,15 @@ const elevationControl = L.control.elevation({
 }).addTo(map);
 
 
+
+function ausklappen() {
+    var x = document.getElementById("profil")
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none"
+    }
+}
 
 // funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
 const drawTrack = (nr) => {
