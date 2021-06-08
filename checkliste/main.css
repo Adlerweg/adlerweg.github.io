@@ -1,0 +1,56 @@
+body {
+    max-width: 1440px;
+    min-height: 000px;
+    padding: 0.3em;
+    margin: auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    color: #fff;
+    background-color: olive;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.7em;
+    padding: 1.1em;
+    text-align: center;
+}
+
+header .logo {
+    color: #4f5850;
+}
+
+header a {
+    color: white;
+}
+
+#map {
+    width: calc(100% -2px);
+    height: 70vh;
+    border: 1px solid gray;
+    background-color: lightslategray;
+}
+
+#profile {
+    margin-top: 0.3em;
+    border: lpx solid gray;
+}
+
+#map path.gold-theme.elevation-polyline {
+    stroke-opacity: 0;
+}
+
+
+.right,
+.right a:link,
+.right a:visited {
+    color: white;
+    font-size: 0.6em;
+    float: right;
+    padding: 8px;
+}
+
+.center {
+    float: center;
+    ;
+}
