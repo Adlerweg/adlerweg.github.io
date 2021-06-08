@@ -45,7 +45,9 @@ console.log(baselayers.wms);
 
 //add scale
 L.control.scale({
-    imperial: false
+    imperial: false,
+    maxWidth: 400,
+
 }).addTo(map);
 
 //rainviewer to main map
@@ -108,7 +110,7 @@ const drawTrack = (nr) => {
     elevationControl.load(`routes/${nr}.gpx`);
 };
 
-const selectedTrack = 1;
+//const selectedTrack = 1;
 drawTrack(selectedTrack);
 
 
