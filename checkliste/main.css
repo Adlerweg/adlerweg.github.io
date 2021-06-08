@@ -57,75 +57,75 @@ header a {
 
 * {
     box-sizing: border-box;
-  }  
+}
 
 .spalte {
     background-color: grey;
     color: white;
     padding: 10px;
-  }
-  
-  .column {
+}
+
+.column {
     float: left;
     padding: 15px;
-  }
-  
-  .clearfix::after {
+}
+
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .menu {
+}
+
+.menu {
     width: 25%;
-  }
-  
-  .content {
+}
+
+.content {
     width: 75%;
-  }
-  
-  .menu ul {
+}
+
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .menu li {
+}
+
+.menu li {
     padding: 8px;
     margin-bottom: 8px;
     background-color: #2d4b0cfb;
     color: #ffffff;
-  }
-  
-  .menu li:hover {
+}
+
+.menu li:hover {
     background-color: #643012;
-  }
+}
 
 
 .top {
     padding-bottom: 1px;
 }
 
-  #home {
+#home {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #2d4b0cfb;
-  }
-  
-  #liste  {
+}
+
+#liste {
     float: left;
-  }
-  
-  #liste a {
+}
+
+#liste a {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  #liste a:hover{
+}
+
+#liste a:hover {
     background-color: #643012;
-  }
+}
