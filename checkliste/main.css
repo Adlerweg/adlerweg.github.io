@@ -41,6 +41,9 @@ header a {
     stroke-opacity: 0;
 }
 
+#corona{
+    color: brown;
+}
 
 .link,
 .link a:link,
