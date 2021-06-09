@@ -143,3 +143,14 @@ header a {
         width: 100vw
     }
 }
+
+
+.checkboxes ul, .checkboxes li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.checkboxes li {
+    display:inline-block;
+    width:22%;
+}
