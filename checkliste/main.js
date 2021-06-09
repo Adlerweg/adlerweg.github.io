@@ -1,7 +1,7 @@
 let baselayers = {
     terrain: L.tileLayer.provider("BasemapAT.terrain"),
     highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
-    openstreet:  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
+    openstreet: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
 };
 
 // Overlays für die Themen zum Ein- und Ausschalten definieren
@@ -45,7 +45,9 @@ L.control.rainviewer({
     positionSliderLabelText: "Uhrzeit:",
     opacitySliderLabelText: "Deckkraft:",
     animationInterval: 450,
-    opacity: 0.7
+    opacity: 0.7,
+}, {
+    collapsed: false // funktioniert leider hier nicht
 }).addTo(map);
 
 // DATEN ANZEIGEN FIX
