@@ -67,6 +67,10 @@ header a {
     
 }
 
+.bildbeschriftung {
+    text-align: center
+}
+
 #home {
     list-style-type: none;
     margin: 0;
@@ -125,6 +129,8 @@ header a {
         width: 100vw
     }
 }
+
+
 
 
 
