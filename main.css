@@ -4,7 +4,7 @@ body {
     padding: 0.3em;
     margin: auto;
     font-family: "Open Sans", sans-serif;
-    text-align: justify; 
+    text-align: justify;
 }
 
 
@@ -32,12 +32,12 @@ header a {
 
 .row {
     display: flex;
-  }
-  
-  .column {
+}
+
+.column {
     flex: 50%;
     padding: 5px;
-  }
+}
 
 /*.picture {
     display: block;
