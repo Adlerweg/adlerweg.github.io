@@ -33,7 +33,8 @@ header a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
+    
 }
 
 #home {
@@ -54,6 +55,7 @@ header a {
     padding: 2px;
     text-indent: 1.3em;
     text-align: center;
+    font-weight: bold;
 }
 
 #liste a {
