@@ -29,13 +29,22 @@ header a {
     padding-bottom: 1px;
 }
 
-.picture {
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+
+/*.picture {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     
-}
+}*/
 
 #home {
     list-style-type: none;
