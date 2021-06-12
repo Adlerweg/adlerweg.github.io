@@ -26,6 +26,14 @@ header a {
     color: white;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid gray;
+    align-items: center;
+    
+}
+
 .top {
     padding-bottom: 1px;
 }
