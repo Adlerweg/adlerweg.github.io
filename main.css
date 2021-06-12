@@ -38,15 +38,6 @@ header a {
     padding-bottom: 1px;
 }
 
-/*css-slides img { 
-    opacity:0; 
-    animation-name: fade; 
-    animation-duration: 9s; 
-    animation-iteration-count: infinite; 
-    position:absolute; 
-    left:0; 
-    right:0; 
-}*/
 
 .row {
     display: flex;
@@ -133,7 +124,7 @@ header a {
 
 
 
-
+/*slideshow stuff*/
 
 
 .contener_slideshow
