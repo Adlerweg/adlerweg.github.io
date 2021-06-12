@@ -4,8 +4,9 @@ body {
     padding: 0.3em;
     margin: auto;
     font-family: "Open Sans", sans-serif;
-   
+    text-align: justify; 
 }
+
 
 header {
     color: #fff;
