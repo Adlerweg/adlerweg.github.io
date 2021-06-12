@@ -4,6 +4,7 @@ body {
     padding: 0.3em;
     margin: auto;
     font-family: "Open Sans", sans-serif;
+   
 }
 
 header {
@@ -28,6 +29,7 @@ header a {
     padding-bottom: 1px;
 }
 
+
 #home {
     list-style-type: none;
     margin: 0;
@@ -45,6 +47,7 @@ header a {
     color: white;
     padding: 2px;
     text-indent: 1.3em;
+    text-align: center;
 }
 
 #liste a {
