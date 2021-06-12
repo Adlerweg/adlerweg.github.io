@@ -27,7 +27,7 @@ let layerControl = L.control.layers({
     "RELIEF (basemap.at)": baselayers.terrain,
 }, {
     "Routen": overlays.routes,
-    "Wetterstationen": overlays.stations,
+    //"Wetterstationen": overlays.stations,
 }).addTo(map);
 
 //LEAFLET SCALEBAR
