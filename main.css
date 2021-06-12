@@ -38,6 +38,16 @@ header a {
     padding-bottom: 1px;
 }
 
+/*css-slides img { 
+    opacity:0; 
+    animation-name: fade; 
+    animation-duration: 9s; 
+    animation-iteration-count: infinite; 
+    position:absolute; 
+    left:0; 
+    right:0; 
+}*/
+
 .row {
     display: flex;
 }
@@ -49,13 +59,13 @@ header a {
     /*box-shadow: 8px 8px 9px #aaa;*/
 }
 
-/*.picture {
+.picture {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     
-}*/
+}
 
 #home {
     list-style-type: none;
