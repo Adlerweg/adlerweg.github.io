@@ -40,6 +40,13 @@ header a {
     float: left;
 }
 
+.spalte2 {
+    background-color: #2d4b0cfb;
+    color: white;
+    padding: 2px;
+    text-indent: 1.3em;
+}
+
 #liste a {
     display: inline-block;
     color: white;
