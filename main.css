@@ -29,6 +29,11 @@ header a {
     padding-bottom: 1px;
 }
 
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #home {
     list-style-type: none;
