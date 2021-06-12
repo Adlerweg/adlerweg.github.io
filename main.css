@@ -58,6 +58,20 @@ header a {
     float: left;
 }
 
+.adress_git {
+    text-align: center;
+    font-size: small;
+}
+
+.spalte {
+    background-color: olive;
+    color: white;
+    padding: 0px;
+    text-indent: 1.3em;
+    text-align: center;
+    font-weight: bold;
+}
+
 .spalte2 {
     background-color: #2d4b0cfb;
     color: white;
