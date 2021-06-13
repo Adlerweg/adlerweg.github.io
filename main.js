@@ -14,7 +14,7 @@ let overlays = {
 // KARTE INITIALISIERT + ZOOM CENTER
 let map = L.map("map", {
     center: [47.267222, 11.392778],
-    zoom: 7,
+    zoom: 5.4,
     fullscreenControl: true, //leaflet fullscreen
     layers: [
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
