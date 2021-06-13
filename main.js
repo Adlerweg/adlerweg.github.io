@@ -48,7 +48,9 @@ var options = {
     lengthUnit: {
       factor: null,    //  from km to nm
       display: 'km',
-      decimal: 2
+      decimal: 2,
+      label: "Entfernung",
+
     }
   };
 L.control.ruler(options).addTo(map);
