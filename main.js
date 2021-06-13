@@ -46,8 +46,8 @@ var marker = L.marker([ 47.267222,11.392778], {
 var options = {
     position: 'topleft',
     lengthUnit: {
-      factor: 0.539956803,    //  from km to nm
-      display: 'Nautical Miles',
+      factor: null,    //  from km to nm
+      display: 'km',
       decimal: 2
     }
   };
