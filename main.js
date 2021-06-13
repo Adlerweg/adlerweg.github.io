@@ -42,6 +42,17 @@ L.control.scale({
 var marker = L.marker([ 47.267222,11.392778], {
 }).addTo(map).bindPopup("<h1>Adlerweg - Hard Facts</h1> <p>Der Adlerweg Rundgang befindet sich in Tirol und führt quer durch das wunderschöne Bundesland.</p> <br> <ul> <li>33 Etappen</li><br><li>413 km</li><br><li>31.000 hm</li><br><li>24 Tagesetappen in Nordtirol</li><br><li>9 Tagesetappen in der Glockner- und Venedigergruppe</li>");
 
+//leaflet-ruler
+var options = {
+    position: 'topleft',
+    lengthUnit: {
+      factor: 0.539956803,    //  from km to nm
+      display: 'Nautical Miles',
+      decimal: 2
+    }
+  };
+L.control.ruler(options).addTo(map);
+
 //coordiante control
 //var coordinates = L.control.mousePosition().addTo(map);
 
