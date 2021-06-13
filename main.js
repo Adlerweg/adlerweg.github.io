@@ -2,6 +2,7 @@ let baselayers = {
     terrain: L.tileLayer.provider("BasemapAT.terrain"),
     highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
     openstreet: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
+    
 };
 
 // Overlays für die Themen zum Ein- und Ausschalten definieren
@@ -35,6 +36,8 @@ L.control.scale({
     imperial: false,
     maxWidth: 400,
 }).addTo(map);
+
+L.marker([ 47.267222,11.392778]).addTo(map);
 
 //LEAFLET RAINVIEWER
 L.control.rainviewer({
@@ -112,3 +115,4 @@ pulldown.onchange = () => {
     drawTrack(pulldown.value);
 };
 
+//var marker = L.marker([ 47.267222,11.392778]).addTo(map);
