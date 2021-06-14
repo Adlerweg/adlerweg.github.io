@@ -79,7 +79,6 @@ fetch(awsURL)
                 <li>Luftfeuchtigkeit: ${station.properties.RH ||'?'} %</li>
                 <li>Schneehöhe: ${station.properties.HS ||'?'} cm</li>
                 <li>Windgeschwindigkeit: ${station.properties.WG ||'?'} km/h</li>
-                <li>Windrichtung: ${station.properties.WR ||'?'} °</li>
              </ul>
             `);
             marker.addTo(overlays.stations);
