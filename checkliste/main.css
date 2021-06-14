@@ -26,10 +26,15 @@ header a {
 
 #map {
     height: 400px;
-    width: 100%;
+    width: 90%;
     border: 1px solid gray;
     align-items: center;
+    margin-left: 5em;
     /*platzhalter karte mit rahmen*/
+}
+
+#margin {
+    margin-left: 2em;
 }
 
 #profile {
@@ -43,6 +48,8 @@ header a {
 
 #corona{
     color: brown;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .link,
@@ -61,6 +68,12 @@ header a {
 
 * {
     box-sizing: border-box;
+}
+
+#ende {
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .spalte {
