@@ -23,6 +23,8 @@ let map = L.map("map", {
     ]
 })
 
+
+
 // OVERLAY: + KARTEN & DATEN
 let layerControl = L.control.layers({
     "OpenStreetMap": baselayers.openstreet,
@@ -55,6 +57,8 @@ var options = {
   };
 L.control.ruler(options).addTo(map);
 
+
+
 //coordiante control
 //var coordinates = L.control.mousePosition().addTo(map);
 
@@ -71,6 +75,8 @@ L.control.rainviewer({
 }, {
     collapsed: false // funktioniert leider hier nicht
 }).addTo(map);
+
+
 
 // DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
@@ -133,6 +139,8 @@ pulldown.onchange = () => {
     //console.log('changed!!!!!', pulldown.value);
     drawTrack(pulldown.value);
 };
+
+
 
 //var marker = L.marker([ 47.267222,11.392778]).addTo(map);
 
