@@ -29,7 +29,7 @@ header a {
     width: 90%;
     border: 1px solid gray;
     align-items: center;
-    margin-left: 5em;
+    margin-left: 3em;
     /*platzhalter karte mit rahmen*/
 }
 
@@ -37,6 +37,9 @@ header a {
     margin-left: 2em;
 }
 
+#margin5 {
+    margin-left: 2.4em;
+}
 #profile {
     margin-top: 0.3em;
     border: lpx solid gray;
