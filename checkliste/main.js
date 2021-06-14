@@ -55,13 +55,13 @@ overlays.routes.addTo(map);
 //overlays.stations.addTo(map);
 
 
-////////////////////////////////////////////test wetter
+///////////////////////////////////////////////////////////////////////
+//WETTERSTATIONEN MARKER//
+let awsURL = 'https://wiski.tirol.gv.at/lawine/produkte/ogd.geojson';
 
-let awsURL = 'https://wiski.tirol.gv.at/lawine/produkte/ogd.geojson'; //haben die url mit den daten zu den wetterstationen in variabel awsURL gesopeichert
-
-fetch(awsURL) //daten herunterladen von der datagvat bib
-    .then(response => response.json()) //konvertieren in json (fehleranfällig daher nächste then clause)
-    .then(json => { //weiterarbeiten mit json
+fetch(awsURL)
+    .then(response => response.json())
+    .then(json => {
         //console.log('Daten konvertiert: ', json);
         for (station of json.features) {
             //console.log('Station: ', station);
@@ -69,9 +69,7 @@ fetch(awsURL) //daten herunterladen von der datagvat bib
                 station.geometry.coordinates[1],
                 station.geometry.coordinates[0]
             ]);
-
-            let formattedDate = new Date(station.properties.date); //neues datumsobjekt erstellen, in Zeile 58 wird darauf zurückgegriffen, de als ländereinstellung 
-
+            let formattedDate = new Date(station.properties.date);
             marker.bindPopup(`
                 <h3>${station.properties.name}</h3>
                      <ul>
