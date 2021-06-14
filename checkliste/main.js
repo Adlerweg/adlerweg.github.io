@@ -52,7 +52,48 @@ L.control.rainviewer({
 
 // DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
-overlays.stations.addTo(map);
+//overlays.stations.addTo(map);
+
+
+////////////////////////////////////////////test wetter
+
+let awsURL = 'https://wiski.tirol.gv.at/lawine/produkte/ogd.geojson'; //haben die url mit den daten zu den wetterstationen in variabel awsURL gesopeichert
+
+fetch(awsURL) //daten herunterladen von der datagvat bib
+    .then(response => response.json()) //konvertieren in json (fehleranfällig daher nächste then clause)
+    .then(json => { //weiterarbeiten mit json
+        //console.log('Daten konvertiert: ', json);
+        for (station of json.features) {
+            //console.log('Station: ', station);
+            let marker = L.marker([
+                station.geometry.coordinates[1],
+                station.geometry.coordinates[0]
+            ]);
+
+            let formattedDate = new Date(station.properties.date); //neues datumsobjekt erstellen, in Zeile 58 wird darauf zurückgegriffen, de als ländereinstellung 
+
+            marker.bindPopup(`
+                <h3>${station.properties.name}</h3>
+                     <ul>
+                <li>Datum: ${formattedDate.toLocaleString("de")}</li>
+                <li>Seehöhe: ${station.geometry.coordinates[2] ||'?'} m.ü.A.</li>
+                <li>Temperatur: ${station.properties.LT ||'?'} °C</li>
+                <li>Luftfeuchtigkeit: ${station.properties.RH ||'?'} %</li>
+                <li>Schneehöhe: ${station.properties.HS ||'?'} cm</li>
+                <li>Windgeschwindigkeit: ${station.properties.WG ||'?'} km/h</li>
+                <li>Windrichtung: ${station.properties.WR ||'?'} °</li>
+             </ul>
+            `);
+            marker.addTo(overlays.stations);
+        }
+    });
+
+//########################################################################################
+// warten auf johannas einbindung der json ROUTEN des adlerwegs...wenn erledigt:
+// ROUTEN HIER ALLE ALS LINIE EINFÜGEN (in miniveriosn ohne viel funktionen...nur damit man weiß wo man geht bzw das wetter wo wie ist)
+
+
+
 
 // funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
 const drawTrack = (nr) => {
@@ -92,7 +133,6 @@ const drawTrack = (nr) => {
 
 const selectedTrack = 1;
 drawTrack(selectedTrack);
-
 
 //console.log('biketirol json: ', BIKETIROL);
 let pulldown = document.querySelector("#pulldown");
