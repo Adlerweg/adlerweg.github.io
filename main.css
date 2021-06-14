@@ -122,7 +122,10 @@ header a {
 }
 
 
-
+#margin {
+    margin-left: 2em;
+    margin-right: 2em;
+}
 
 /*slideshow*/
 
