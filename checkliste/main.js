@@ -7,14 +7,14 @@ let baselayers = {
 // Overlays für die Themen zum Ein- und Ausschalten definieren
 let overlays = {
     routes: L.featureGroup(),
-    stations: L.markerClusterGroup(),
+    stations: L.markerClusterGroup(), //LEAFLET MARKERCLUSTER
 };
 
 // KARTE INITIALISIERT + ZOOM CENTER + FULLSCREEN
 let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 9,
-    fullscreenControl: true, //leaflet fullscreen
+    fullscreenControl: true, //LEAFLET FULLSCREEN
     layers: [
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")
     ]
