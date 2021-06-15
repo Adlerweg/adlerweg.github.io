@@ -7,7 +7,7 @@ let baselayers = {
 // Overlays für die Themen zum Ein- und Ausschalten definieren
 let overlays = {
     routes: L.featureGroup(),
-    stations: L.featureGroup(),
+    stations: L.markerClusterGroup(),
 };
 
 // KARTE INITIALISIERT + ZOOM CENTER
@@ -52,7 +52,7 @@ L.control.rainviewer({
 
 // DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
-//overlays.stations.addTo(map);
+overlays.stations.addTo(map);
 
 
 ///////////////////////////////////////////////////////////////////////
