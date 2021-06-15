@@ -62,6 +62,17 @@ header a {
     text-align: center
 }
 
+.eagle {
+    height: 100px;
+    width: 100px;
+    position: ;
+}
+
+.adlericon {
+    text-align: right;
+    font-size: small;
+}
+
 #home {
     list-style-type: none;
     margin: 0;
