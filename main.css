@@ -73,6 +73,13 @@ header a {
     font-size: x-small;
 }
 
+.adlewegVideo {
+    position: fixed; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
 #home {
     list-style-type: none;
     margin: 0;
