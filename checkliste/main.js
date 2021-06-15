@@ -10,7 +10,7 @@ let overlays = {
     stations: L.markerClusterGroup(),
 };
 
-// KARTE INITIALISIERT + ZOOM CENTER
+// KARTE INITIALISIERT + ZOOM CENTER + FULLSCREEN
 let map = L.map("map", {
     center: [47.267222, 11.392778],
     zoom: 9,
