@@ -31,7 +31,7 @@ header a {
     width: 100%;
     border: 1px solid gray;
     align-items: center;
-    
+
 }
 
 .top {
@@ -55,22 +55,31 @@ header a {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    
+
 }
 
 .bildbeschriftung {
     text-align: center
 }
 
+.videobeschriftung {
+    text-align: center;
+}
+
 .eagle {
     height: 100px;
     width: 100px;
-    
+
 }
 
 .adlericon {
     text-align: right;
     font-size: x-small;
+}
+
+.adlerwegVideo {
+    height: 350px;
+    width: 609.5px;
 }
 
 #home {
@@ -141,77 +150,154 @@ header a {
 /*slideshow*/
 
 
-.contener_slideshow
-{
-  width:610px;
-  height:580px;
-  overflow: hidden;
-  position: relative;
-  background-image: url(http:YOUR-URL-IMAGE.png);
-}
-.slid_1, .slid_2, .slid_3
-{
-  position: absolute;
-  width:610px;
-  height:211px;
-}
-.slid_1{left: 10;}
-.slid_2{left: 610px;}
-.slid_3{left: 1220px;}
-/*.slide_4{left:1320px;}*/
-.contener_slide
-{
-  width: 1220px;
-  height: 211px;
-  left:0px;
-  position: absolute;
-  -webkit-animation-duration: 17s;
-  -webkit-animation-iteration-count:infinite;
-  -webkit-animation-name: anim_slide;
-  -moz-animation-duration: 17s;
-  -moz-animation-iteration-count:infinite;
-  -moz-animation-name: anim_slide;
-  -ms-animation-duration: 17s;
-  -ms-animation-iteration-count:infinite;
-  -ms-animation-name: anim_slide;
-  animation-duration: 17s;
-  animation-iteration-count:infinite;
-  animation-name: anim_slide;
-}
-@-webkit-keyframes anim_slide 
-{
-  0% {left:0px;}
-  22% {left:0px;}
-  33% {left:-610px;}
-  45% {left:-610px;}
-  66% {left:-1220px;}
-  90% {left:-1220px;}
-}
-@-moz-keyframes anim_slide 
-{
-  0% {left:0px;}
-  22% {left:0px;}
-  33% {left:-610px;}
-  45% {left:-610px;}
-  66% {left:-1220px;}
-  90% {left:-1220px;}
-}
-@-ms-keyframes anim_slide 
-{
-  0% {left:0px;}
-  22% {left:0px;}
-  33% {left:-610px;}
-  45% {left:-610px;}
-  66% {left:-1220px;}
-  90% {left:-1220px;}
-}
-@keyframes anim_slide 
-{
-  0% {left:0px;}
-  22% {left:0px;}
-  33% {left:-610px;}
-  45% {left:-610px;}
-  66% {left:-1220px;}
-  90% {left:-1220px;}
+.contener_slideshow {
+    width: 610px;
+    height: 560px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(http:YOUR-URL-IMAGE.png);
 }
 
+.slid_1,
+.slid_2,
+.slid_3 {
+    position: absolute;
+    width: 610px;
+    height: 211px;
+}
+
+.slid_1 {
+    left: 10;
+}
+
+.slid_2 {
+    left: 610px;
+}
+
+.slid_3 {
+    left: 1220px;
+}
+
+/*.slide_4{left:1320px;}*/
+.contener_slide {
+    width: 1220px;
+    height: 211px;
+    left: 0px;
+    position: absolute;
+    -webkit-animation-duration: 17s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: anim_slide;
+    -moz-animation-duration: 17s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: anim_slide;
+    -ms-animation-duration: 17s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-name: anim_slide;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-name: anim_slide;
+}
+
+@-webkit-keyframes anim_slide {
+    0% {
+        left: 0px;
+    }
+
+    22% {
+        left: 0px;
+    }
+
+    33% {
+        left: -610px;
+    }
+
+    45% {
+        left: -610px;
+    }
+
+    66% {
+        left: -1220px;
+    }
+
+    90% {
+        left: -1220px;
+    }
+}
+
+@-moz-keyframes anim_slide {
+    0% {
+        left: 0px;
+    }
+
+    22% {
+        left: 0px;
+    }
+
+    33% {
+        left: -610px;
+    }
+
+    45% {
+        left: -610px;
+    }
+
+    66% {
+        left: -1220px;
+    }
+
+    90% {
+        left: -1220px;
+    }
+}
+
+@-ms-keyframes anim_slide {
+    0% {
+        left: 0px;
+    }
+
+    22% {
+        left: 0px;
+    }
+
+    33% {
+        left: -610px;
+    }
+
+    45% {
+        left: -610px;
+    }
+
+    66% {
+        left: -1220px;
+    }
+
+    90% {
+        left: -1220px;
+    }
+}
+
+@keyframes anim_slide {
+    0% {
+        left: 0px;
+    }
+
+    22% {
+        left: 0px;
+    }
+
+    33% {
+        left: -610px;
+    }
+
+    45% {
+        left: -610px;
+    }
+
+    66% {
+        left: -1220px;
+    }
+
+    90% {
+        left: -1220px;
+    }
+}
