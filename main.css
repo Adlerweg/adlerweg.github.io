@@ -73,11 +73,9 @@ header a {
     font-size: x-small;
 }
 
-.adlewegVideo {
-    position: fixed; 
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%);
+.adlerwegVideo {
+  align-items: center;
+  position: relative;
 }
 
 #home {
