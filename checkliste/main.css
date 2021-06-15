@@ -69,10 +69,6 @@ header a {
     ;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 #ende {
     text-align: center;
     margin-left: 2em;
@@ -93,12 +89,16 @@ header a {
     text-indent: 1.3em;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .column {
     float: left;
     padding: 15px;
 }
 
-.clearfix::after {
+.auswahl::after {
     content: "";
     clear: both;
     display: table;
