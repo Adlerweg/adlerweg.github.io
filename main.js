@@ -2,7 +2,7 @@ let baselayers = {
     terrain: L.tileLayer.provider("BasemapAT.terrain"),
     highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
     openstreet: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
-    
+
 };
 
 
@@ -41,20 +41,19 @@ L.control.scale({
     maxWidth: 400,
 }).addTo(map);
 
-var marker = L.marker([ 47.267222,11.392778], {
-}).addTo(map).bindPopup("<h1>Adlerweg - Hard Facts</h1> <p>Der Adlerweg Rundgang befindet sich in Tirol und führt quer durch das wunderschöne Bundesland.</p> <br> <ul> <li>33 Etappen</li><br><li>413 km</li><br><li>31.000 hm</li><br><li>24 Tagesetappen in Nordtirol</li><br><li>9 Tagesetappen in der Glockner- und Venedigergruppe</li>");
+var marker = L.marker([47.267222, 11.392778], {}).addTo(map).bindPopup("<h1>Adlerweg - Hard Facts</h1> <p>Der Adlerweg Rundgang befindet sich in Tirol und führt quer durch das wunderschöne Bundesland.</p> <br> <ul> <li>33 Etappen</li><br><li>413 km</li><br><li>31.000 hm</li><br><li>24 Tagesetappen in Nordtirol</li><br><li>9 Tagesetappen in der Glockner- und Venedigergruppe</li>");
 
 //leaflet-ruler
 var options = {
     position: 'topleft',
     lengthUnit: {
-      factor: null,    //  from km to nm
-      display: 'km',
-      decimal: 2,
-      label: "Entfernung",
+        factor: null, //  from km to nm
+        display: 'km',
+        decimal: 2,
+        label: "Entfernung",
 
     }
-  };
+};
 L.control.ruler(options).addTo(map);
 
 
@@ -64,16 +63,16 @@ L.control.ruler(options).addTo(map);
 
 //LEAFLET RAINVIEWER
 //L.control.rainviewer({
-    //position: 'topleft',
-    //nextButtonText: '>',
-    //playStopButtonText: 'Start/Stop',
-    //prevButtonText: '<',
-    //positionSliderLabelText: "Uhrzeit:",
-    //opacitySliderLabelText: "Deckkraft:",
-    //animationInterval: 450,
-    //opacity: 0.7,
+//position: 'topleft',
+//nextButtonText: '>',
+//playStopButtonText: 'Start/Stop',
+//prevButtonText: '<',
+//positionSliderLabelText: "Uhrzeit:",
+//opacitySliderLabelText: "Deckkraft:",
+//animationInterval: 450,
+//opacity: 0.7,
 //}, {
-   //collapsed: false // funktioniert leider hier nicht
+//collapsed: false // funktioniert leider hier nicht
 //}).addTo(map);
 
 
@@ -143,5 +142,3 @@ pulldown.onchange = () => {
 
 
 //var marker = L.marker([ 47.267222,11.392778]).addTo(map);
-
-
