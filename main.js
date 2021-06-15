@@ -63,18 +63,18 @@ L.control.ruler(options).addTo(map);
 //var coordinates = L.control.mousePosition().addTo(map);
 
 //LEAFLET RAINVIEWER
-L.control.rainviewer({
-    position: 'topleft',
-    nextButtonText: '>',
-    playStopButtonText: 'Start/Stop',
-    prevButtonText: '<',
-    positionSliderLabelText: "Uhrzeit:",
-    opacitySliderLabelText: "Deckkraft:",
-    animationInterval: 450,
-    opacity: 0.7,
-}, {
-    collapsed: false // funktioniert leider hier nicht
-}).addTo(map);
+//L.control.rainviewer({
+    //position: 'topleft',
+    //nextButtonText: '>',
+    //playStopButtonText: 'Start/Stop',
+    //prevButtonText: '<',
+    //positionSliderLabelText: "Uhrzeit:",
+    //opacitySliderLabelText: "Deckkraft:",
+    //animationInterval: 450,
+    //opacity: 0.7,
+//}, {
+   //collapsed: false // funktioniert leider hier nicht
+//}).addTo(map);
 
 
 
