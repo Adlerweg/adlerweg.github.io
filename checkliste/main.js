@@ -52,7 +52,7 @@ L.control.rainviewer({
 
 // DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
-//overlays.stations.addTo(map);
+overlays.stations.addTo(map);
 
 
 ///////////////////////////////////////////////////////////////////////
