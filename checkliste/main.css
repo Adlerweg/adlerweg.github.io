@@ -30,7 +30,6 @@ header a {
     border: 1px solid gray;
     align-items: center;
     margin-left: 3em;
-    /*platzhalter karte mit rahmen*/
 }
 
 #margin {
@@ -121,7 +120,6 @@ header a {
     background-color: #643012;
 }
 
-
 .top {
     padding-bottom: 1px;
 }
@@ -161,7 +159,6 @@ header a {
         width: 100vw
     }
 }
-
 
 .checkboxes ul, .checkboxes li {
     margin:0;
