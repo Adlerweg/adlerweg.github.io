@@ -37,16 +37,8 @@ header a {
     margin-left: 2em;
 }
 
-#margin5 {
+#margin2 {
     margin-left: 2.4em;
-}
-#profile {
-    margin-top: 0.3em;
-    border: lpx solid gray;
-}
-
-#map path.gold-theme.elevation-polyline {
-    stroke-opacity: 0;
 }
 
 #corona{
