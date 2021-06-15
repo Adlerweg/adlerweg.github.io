@@ -62,6 +62,17 @@ header a {
     text-align: center
 }
 
+.eagle {
+    height: 100px;
+    width: 100px;
+    
+}
+
+.adlericon {
+    text-align: right;
+    font-size: x-small;
+}
+
 #home {
     list-style-type: none;
     margin: 0;
@@ -133,7 +144,7 @@ header a {
 .contener_slideshow
 {
   width:610px;
-  height:350px;
+  height:580px;
   overflow: hidden;
   position: relative;
   background-image: url(http:YOUR-URL-IMAGE.png);
@@ -154,16 +165,16 @@ header a {
   height: 211px;
   left:0px;
   position: absolute;
-  -webkit-animation-duration: 15s;
+  -webkit-animation-duration: 17s;
   -webkit-animation-iteration-count:infinite;
   -webkit-animation-name: anim_slide;
-  -moz-animation-duration: 15s;
+  -moz-animation-duration: 17s;
   -moz-animation-iteration-count:infinite;
   -moz-animation-name: anim_slide;
-  -ms-animation-duration: 15s;
+  -ms-animation-duration: 17s;
   -ms-animation-iteration-count:infinite;
   -ms-animation-name: anim_slide;
-  animation-duration: 15s;
+  animation-duration: 17s;
   animation-iteration-count:infinite;
   animation-name: anim_slide;
 }
