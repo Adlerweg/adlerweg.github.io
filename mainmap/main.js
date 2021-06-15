@@ -46,6 +46,26 @@ L.control.scale({
     maxWidth: 400,
 }).addTo(map);
 
+const selectedTrack = 1;
+
+// Pulldown Menü befüllen
+let pulldown = document.querySelector("#pulldown");
+let selected = '';                          // leere Variable                                                               
+for (let track of ADLERWEG) {
+    if (selectedTrack == track.Etappennummer) {        // wenn zutrifft property auf selected
+        selected = 'selected';
+    } else {
+        selected = '';                      // sonst leer
+    }
+    pulldown.innerHTML += `<option ${selected} value="${track.Etappennummer}">${track.Titel}</option>`;        // value um draufzugreifen können (je Tracknummer)
+};
+
+
+
+
+
+
+
 
 
 
