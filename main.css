@@ -74,8 +74,8 @@ header a {
 }
 
 .adlerwegVideo {
-  align-items: center;
-  position: relative;
+height: 350px;
+width: 609.5px;
 }
 
 #home {
@@ -149,7 +149,7 @@ header a {
 .contener_slideshow
 {
   width:610px;
-  height:580px;
+  height:560px;
   overflow: hidden;
   position: relative;
   background-image: url(http:YOUR-URL-IMAGE.png);
