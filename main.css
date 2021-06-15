@@ -62,6 +62,10 @@ header a {
     text-align: center
 }
 
+.videobeschriftung {
+    text-align: center;
+}
+
 .eagle {
     height: 100px;
     width: 100px;
