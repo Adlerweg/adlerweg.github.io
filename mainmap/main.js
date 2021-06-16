@@ -63,7 +63,7 @@ L.control.scale({
 // Profile Control 
 const elevationControl = L.control.elevation({
     elevationDiv: '#profile',
-    followMarker: false,                                    // Kartenausschnitt geht nicht mit 
+    followMarker: false, // Kartenausschnitt geht nicht mit 
     theme: 'gold-theme',
 });
 const ausklappen = () => {
@@ -71,7 +71,7 @@ const ausklappen = () => {
 };
 
 // Funktion um Etappe/track zu zeichnen
-const drawTrack = (Layer, etappe, col, op, wei) =>{
+const drawTrack = (Layer, etappe, col, op, wei) => {
     overlays.routes24.clearLayers();
     overlays.routes9.clearLayers();
     elevationControl.clear();
@@ -101,20 +101,20 @@ const drawTrack = (Layer, etappe, col, op, wei) =>{
     if (Layer === "routes9" && etappe == 999) {
         gpxTrack.addTo(overlays.routes9full)
     };
-        gpxTrack.on('loaded', () => {
-        
-        document.getElementById("ausklappButton").disabled=false;
+    gpxTrack.on('loaded', () => {
+
+        document.getElementById("ausklappButton").disabled = false;
         if (etappe != 999) {
             elevationControl.load(`${Layer}/${etappe}.gpx`);
             map.fitBounds(gpxTrack.getBounds());
         };
-        
+
         // Pop-up
         for (let track of ADLERWEG) {
             if (track.Etappennummer === etappe) {
                 stop
-                let url_adlerweg = 'https://www.tirol.at/reisefuehrer/sport/wandern/wandertouren/1?form=hiketours&theme%5B0%5D=1'   
-    
+                let url_adlerweg = 'https://www.tirol.at/reisefuehrer/sport/wandern/wandertouren/1?form=hiketours&theme%5B0%5D=1'
+
                 if (etappe === '5') {
                     url_adlerweg = 'https://www.tirol.at/reisefuehrer/sport/wandern/wandertouren/a-adlerweg-etappe-5-gasthof-buchacker-pinegg'
                 };
@@ -145,7 +145,7 @@ const drawTrack = (Layer, etappe, col, op, wei) =>{
             };
         };
     });
-    
+
 };
 
 
@@ -156,25 +156,25 @@ drawTrack("routes9", 999, 'orange', 0.50, 10)
 // Funktion für Pulldown 24
 const pulldown24 = () => {
     pulldown.innerHTML += `<optgroup label="Adlerweg 24 Tagesetappen">`
-        for (let track of ADLERWEG) {
-            if (track.Etappennummer.startsWith("O")) {
-                continue
-            } else {
-                pulldown.innerHTML += `<option value="${track.Etappennummer}">${track.Titel}</option>`;        // value um draufzugreifen können (je Tracknummer)
-            }
+    for (let track of ADLERWEG) {
+        if (track.Etappennummer.startsWith("O")) {
+            continue
+        } else {
+            pulldown.innerHTML += `<option value="${track.Etappennummer}">${track.Titel}</option>`; // value um draufzugreifen können (je Tracknummer)
         }
+    }
 };
 
 // Funktion für Pulldown 9
 const pulldown9 = () => {
     pulldown.innerHTML += `<optgroup label="Adlerweg 9 Tagesetappen">`
-        for (let track of ADLERWEG) {
-            if (track.Etappennummer.startsWith("O") === false) {
-                continue
-            } else {
-                pulldown.innerHTML += `<option value="${track.Etappennummer}">${track.Titel}</option>`;        // value um draufzugreifen können (je Tracknummer)
-            }
+    for (let track of ADLERWEG) {
+        if (track.Etappennummer.startsWith("O") === false) {
+            continue
+        } else {
+            pulldown.innerHTML += `<option value="${track.Etappennummer}">${track.Titel}</option>`; // value um draufzugreifen können (je Tracknummer)
         }
+    }
 }
 
 
@@ -183,7 +183,7 @@ const pulldown9 = () => {
 // Pulldown Menü befüllen
 let pulldown = document.querySelector("#pulldown");
 
-map.on('overlayadd', function() {
+map.on('overlayadd', function () {
     pulldown.innerHTML = ''
     if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == false) {
         pulldown24();
@@ -192,14 +192,15 @@ map.on('overlayadd', function() {
     if (map.hasLayer(overlays.routes24) == false && map.hasLayer(overlays.routes9) == true) {
         pulldown9()
         drawTrack('routes9', 'O1', 'black', 0.9, 3)
-    } if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == true) {
+    }
+    if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == true) {
         pulldown24();
         pulldown9();
         drawTrack('routes24', '1', 'black', 0.9, 3);
         drawTrack('routes9', 'O1', 'black', 0.9, 3)
     };
 });
-map.on('overlayremove', function() {
+map.on('overlayremove', function () {
     pulldown.innerHTML = ''
     if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == false) {
         pulldown24()
@@ -208,14 +209,15 @@ map.on('overlayremove', function() {
     if (map.hasLayer(overlays.routes24) == false && map.hasLayer(overlays.routes9) == true) {
         pulldown9()
         drawTrack('routes9', 'O1', 'black', 0.9, 3)
-    } if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == true) {
+    }
+    if (map.hasLayer(overlays.routes24) == true && map.hasLayer(overlays.routes9) == true) {
         pulldown24()
         pulldown9()
         drawTrack('routes24', '1', 'black', 0.9, 3);
         drawTrack('routes9', 'O1', 'black', 0.9, 3)
     };
 });
-    
+
 
 
 
@@ -232,7 +234,7 @@ pulldown.onchange = () => {
 
 // Lodging zeichnen
 console.log(LODGING)
-let  popuptext = (m) => {
+let popuptext = (m) => {
     let res = m.bindPopup(
         `<h3>${LODGING[object].properties.Name}</h3>
         <i class="fas fa-phone"> ${LODGING[object].properties.Tel || ''}</i>
@@ -245,7 +247,7 @@ let  popuptext = (m) => {
         `
     )
     return res
-    
+
 };
 
 for (object in LODGING) {
@@ -260,7 +262,7 @@ for (object in LODGING) {
     if (LODGING[object].properties.KAT === 'E') {
         marker.addTo(overlays.E);
         popuptext(marker)
-    
+
     };
     if (LODGING[object].properties.KAT === 'HAG') {
         marker.addTo(overlays.HAG);
@@ -271,15 +273,5 @@ for (object in LODGING) {
         marker.addTo(overlays.HAGS);
         popuptext(marker)
     };
-    
+
 }
-
-
-
-
-
-
-
-
-
-
