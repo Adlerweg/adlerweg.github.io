@@ -19,8 +19,7 @@ let overlays = {
     routes9full: L.featureGroup(),
     HAG: L.featureGroup(),
     HAGS: L.featureGroup(),
-    E: L.featureGroup()
-
+    E: L.featureGroup(),
 };
 
 
@@ -49,7 +48,7 @@ let layerControl = L.control.layers({
     "Adlerweg Osttirol": overlays.routes9full,
     "Hütte, Alm, Gasthof": overlays.HAG,
     "Hütte, Alm, Gasthof (Stempelstelle)": overlays.HAGS,
-    "Einkehrmöglichkeit": overlays.E
+    "Einkehrmöglichkeit": overlays.E,
 }).addTo(map);
 overlays.routes24full.addTo(map);
 overlays.routes9full.addTo(map);
@@ -155,7 +154,7 @@ drawTrack("routes9", 999, 'orange', 0.50, 10)
 
 // Funktion für Pulldown 24
 const pulldown24 = () => {
-    pulldown.innerHTML += `<optgroup label="Adlerweg 24 Tagesetappen">`
+    pulldown.innerHTML += `<optgroup label="Adlerweg Tirol - 24 Tagesetappen">`
     for (let track of ADLERWEG) {
         if (track.Etappennummer.startsWith("O")) {
             continue
@@ -167,7 +166,7 @@ const pulldown24 = () => {
 
 // Funktion für Pulldown 9
 const pulldown9 = () => {
-    pulldown.innerHTML += `<optgroup label="Adlerweg 9 Tagesetappen">`
+    pulldown.innerHTML += `<optgroup label="Adlerweg Osttirol - 9 Tagesetappen">`
     for (let track of ADLERWEG) {
         if (track.Etappennummer.startsWith("O") === false) {
             continue
@@ -233,7 +232,6 @@ pulldown.onchange = () => {
 
 
 // Lodging zeichnen
-console.log(LODGING)
 let popuptext = (m) => {
     let res = m.bindPopup(
         `<h3>${LODGING[object].properties.Name}</h3>
