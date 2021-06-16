@@ -28,10 +28,10 @@ let map = L.map("map", {
 // OVERLAY: + KARTEN & DATEN
 let layerControl = L.control.layers({
     "OpenStreetMap": baselayers.openstreet,
-    "STANDARD (basemap.at)": baselayers.highdpi,
-    "RELIEF (basemap.at)": baselayers.terrain,
+    //"STANDARD (basemap.at)": baselayers.highdpi,
+   // "RELIEF (basemap.at)": baselayers.terrain,
 }, {
-    "Routen": overlays.routes,
+    //"Routen": overlays.routes,
     //"Wetterstationen": overlays.stations,
 }).addTo(map);
 
