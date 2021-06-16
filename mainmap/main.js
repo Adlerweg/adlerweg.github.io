@@ -74,6 +74,7 @@ const drawTrack = (Layer, etappe, col, op, wei) => {
     overlays.routes24.clearLayers();
     overlays.routes9.clearLayers();
     elevationControl.clear();
+    document.getElementById("ausklappButton").disabled = true;
     let gpxTrack = new L.GPX(`${Layer}/${etappe}.gpx`, {
         async: true,
         marker_options: {
