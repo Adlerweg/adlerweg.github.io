@@ -1,17 +1,17 @@
 let baselayers = {
-    terrain: L.tileLayer.provider("BasemapAT.terrain"),
-    highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
+    //terrain: L.tileLayer.provider("BasemapAT.terrain"),
+    //highdpi: L.tileLayer.provider("BasemapAT.highdpi"),
     openstreet: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"),
 
 };
 
 
 
-// Overlays für die Themen zum Ein- und Ausschalten definieren
+/* Overlays für die Themen zum Ein- und Ausschalten definieren
 let overlays = {
     routes: L.featureGroup(),
     stations: L.featureGroup(),
-};
+};*/
 
 // KARTE INITIALISIERT + ZOOM CENTER
 let map = L.map("map", {
@@ -77,11 +77,11 @@ L.control.ruler(options).addTo(map);
 
 
 
-// DATEN ANZEIGEN FIX
+/* DATEN ANZEIGEN FIX
 overlays.routes.addTo(map);
-overlays.stations.addTo(map);
+overlays.stations.addTo(map);*/
 
-// funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
+/* funktion für eigene route, aber als funktion damit man hier jede andere route auch eingeben kann
 const drawTrack = (nr) => {
     //console.log('Track: ', nr);
     elevationControl.clear(); //löscht das gemalte davor
@@ -137,7 +137,7 @@ for (let track of BIKETIROL) {
 pulldown.onchange = () => {
     //console.log('changed!!!!!', pulldown.value);
     drawTrack(pulldown.value);
-};
+};*/
 
 
 
