@@ -101,9 +101,8 @@ const drawTrack = (Layer, etappe, col, op, wei) => {
         gpxTrack.addTo(overlays.routes9full)
     };
     gpxTrack.on('loaded', () => {
-
-        document.getElementById("ausklappButton").disabled = false;
-        if (etappe != 999) {
+            if (etappe != 999) {
+            document.getElementById("ausklappButton").disabled = false;
             elevationControl.load(`${Layer}/${etappe}.gpx`);
             map.fitBounds(gpxTrack.getBounds());
         };
