@@ -147,6 +147,9 @@ header a {
     margin-right: 2em;
 }
 
+
+
+
 /*slideshow*/
 
 
@@ -167,7 +170,7 @@ header a {
 }
 
 .slid_1 {
-    left: 10;
+    left: 10px;
 }
 
 .slid_2 {
