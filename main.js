@@ -29,7 +29,7 @@ let map = L.map("map", {
 let layerControl = L.control.layers({
     "OpenStreetMap": baselayers.openstreet,
     //"STANDARD (basemap.at)": baselayers.highdpi,
-   // "RELIEF (basemap.at)": baselayers.terrain,
+    // "RELIEF (basemap.at)": baselayers.terrain,
 }, {
     //"Routen": overlays.routes,
     //"Wetterstationen": overlays.stations,
